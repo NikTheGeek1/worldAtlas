@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "three/examples/jsm/libs/dat.gui.module": ["node_modules/@types/dat.gui"],
+            "three/build/three.module": ["node_modules/@types/three"]
+        }
+    }
+}
