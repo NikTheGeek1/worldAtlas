@@ -62,6 +62,7 @@ class GUIClass {
         materialFolder.add(this.WebGLBoilerplate.material, 'alphaTest', 0, 1, 0.01).onChange(() => this.updateMaterial.bind(this));
         materialFolder.add(this.WebGLBoilerplate.material, 'visible');
         materialFolder.add(this.WebGLBoilerplate.material, 'side', this.materialOptions.side).onChange(() => this.updateMaterial.bind(this));
+        materialFolder.open();
     }
 
     private createMeshPhongMaterialGUI(): void {
@@ -76,6 +77,7 @@ class GUIClass {
         meshPhongMaterialFolder.add(this.WebGLBoilerplate.material, 'refractionRatio', 0, 1);
         meshPhongMaterialFolder.add(this.WebGLBoilerplate.material, 'displacementScale', -1, 1, 0.01);
         meshPhongMaterialFolder.add(this.WebGLBoilerplate.material, 'displacementBias', -1, 1, 0.01);
+        meshPhongMaterialFolder.open();
     }
 
     private createTextureGUI(): void {
@@ -84,13 +86,14 @@ class GUIClass {
         textureFolder.add(this.WebGLBoilerplate.texture.repeat, 'y', 0.1, 1, 0.1);
         textureFolder.add(this.WebGLBoilerplate.texture.center, 'x', 0, 1, 0.001);
         textureFolder.add(this.WebGLBoilerplate.texture.center, 'y', 0, 1, 0.001);
+        textureFolder.open();
     }
 
     private createPlaneGUI(): void {
         const planePropertiesFolder = this.GUI.addFolder("PlaneGeometry");
         planePropertiesFolder.add(this.planeData, 'widthSegments', 1, 360).onChange(this.regeneratePlaneGeometry.bind(this));
         planePropertiesFolder.add(this.planeData, 'heightSegments', 1, 180).onChange(this.regeneratePlaneGeometry.bind(this));
-
+        planePropertiesFolder.open();
     }
 
     private updateMaterial(): void {
