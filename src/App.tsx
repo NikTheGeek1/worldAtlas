@@ -1,6 +1,8 @@
 import { createRef, useEffect, useState } from 'react';
 import './App.css';
 import WebGLBoilerplate from './atlas/WebGLBoilerplate';
+import visitorTracker from './visitor-tracker';
+visitorTracker();
 
 function App() {
   const [webGLBoilerplate, setWebGLBoilerplate] = useState<WebGLBoilerplate>();
